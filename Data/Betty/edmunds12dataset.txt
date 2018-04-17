@@ -1,0 +1,8 @@
+Hi Bob,
+
+Not sure about a .dat file but the resolution is 128x32x64. It is a
+binary file. Please see attached simplified code for reading.
+
+Cheers,
+
+Matt.

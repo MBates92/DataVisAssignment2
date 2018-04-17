@@ -1,0 +1,11 @@
+
+Robert,
+
+The sally is just a rather random function I invented to generate a 
+pretty vector field. One that I could control and had enough richness to it. 
+I have seen the cone before, mainly the bigger one. Have not seen the little 
+one on the core. I believe there might be some discontinuities (in some 
+derivative) so it may lead to some problems in certain algorithms. Hope this 
+helps.
+
+Roger

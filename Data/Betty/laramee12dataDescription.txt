@@ -1,0 +1,16 @@
+
+The data is in .raw. It's just x,y,z components of
+the vector field (I believe 8-bit -> bias by 0.5
+needed), in x,y,z straightforward ordering (simpler
+than simple).
+
+Subtract 0.5 so that values from [0,1] get transformed
+to [-0.5,+0.5].
+
+The data set size is in .dat.
+
+I produced the simulation data myself using NaSt3D.
+
+Cheers,
+
+Betty

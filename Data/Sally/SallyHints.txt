@@ -1,0 +1,49 @@
+
+
+The data is in 3D cartesian coordinates. For each vector the
+function outputs 3 floats representing the x,y,z components of the
+vector. The vectors are _not_ normalized (so the vector represents
+magnitude as well as direction). The magnitude is not explicitly
+output by the function, you can simply derive it from a given vector
+using sqrt(x^2 + y^2 + z^2), where x,y,z are the 3 components of
+the vector.
+
+Now the function signature:
+
+    void gen_sally( int xs, int ys, int zs, int time, float *sally)
+
+xs, ys and zs represent the dimensions of the data set so if
+xs = ys = zs = 256 we get 256^3 vectors.
+time is an integer which generates sally at different timesteps.
+*sally is a pointer to the array that will store the output of the 
+function.
+
+If we look at the function we can see that it is basically a 
+triple-nested loop.
+
+for( iz = 0; iz < zs; iz++ )
+{
+   for( iy = 0; iy < ys; iy++ )
+   {   
+      for( ix = 0; ix < xs; ix++ )
+      {
+         ...
+         ....Vector created here.....
+      }
+   }
+}
+
+This shows you the order that the vectors are created.
+
+
+Now, through each iteration of these lines are executed:
+
+    *sally++ = scale * (y-yc) + 0.1*(x-xc);
+    *sally++ = scale * -(x-xc) + 0.1*(y-yc);
+    *sally++ = scale * z0;
+
+Through each iteration we store 3 floats into the array(tornado).
+These are simple the x,y,z components of the vector.
+
+So basically at the end you get one large array of floats, and each
+triple of floats makes a vector.
