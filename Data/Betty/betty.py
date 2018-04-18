@@ -23,9 +23,11 @@ zv = np.linspace(0,z-1,z)
 
 x_i, y_i, z_i = np.meshgrid(xv,yv,zv)
 
-x = x_i.flatten()
-y = y_i.flatten()
-z = z_i.flatten()
+y = x_i.flatten()
+z = y_i.flatten()
+x = z_i.flatten()
+
+magnitude = np.sqrt(x_vec**2+y_vec**2+z_vec**2)
 
 data = []
 
