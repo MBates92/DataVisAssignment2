@@ -37,6 +37,7 @@ data.append(z_vec)
 data.append(x)
 data.append(y)
 data.append(z)
+data.append(magnitude)
 data = np.asarray(data).T
 
 np.savetxt('data.csv',data, delimiter = ',',
